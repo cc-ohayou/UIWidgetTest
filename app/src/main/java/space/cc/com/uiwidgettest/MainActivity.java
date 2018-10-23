@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //初始化注册按钮的监听事件
         Button but02=findViewById(R.id.but02);
         but02.setOnClickListener(this);
+        Button but03=findViewById(R.id.but03);
+        but03.setOnClickListener(this);
+
         editText01=findViewById(R.id.editText01);
         imageView= findViewById(R.id.imageView);
         progressBar = findViewById(R.id.progressBar);
@@ -48,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(v.getId()){
             case R.id.but01:
                 Toast.makeText(MainActivity.this,
-                        editText01.getText().toString(), Toast.LENGTH_SHORT).show();
+                 editText01.getText().toString(), Toast.LENGTH_SHORT).show();
                  break;
             case R.id.but02:
                 Log.i(TAG,"but02 click switch imageView bg");
@@ -57,11 +60,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.but03:
                 //空间3种状态 visible(默认的 可见)  invisible（不可见 空间还在 类似于透明）
                 // gone （不可见 屏幕空间也不再占有）
-                if(progressBar.getVisibility()== View.GONE){
+              /*  if(progressBar.getVisibility()== View.GONE){
                     progressBar.setVisibility(View.VISIBLE);
                 }else{
                     progressBar.setVisibility(View.GONE);
-                }
+                }*/
+                ProgressBarActivity.actionStart(MainActivity.this,null);
                 break;
             default:
                 break;
