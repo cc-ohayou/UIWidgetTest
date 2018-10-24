@@ -18,13 +18,19 @@ public class ProgressBarActivity extends BaseActivity implements View.OnClickLis
     private Button mAdd;
     private Button mReduce;
     private Button mReset;
+    //第一进度值
     private TextView mFirstProgressTv;
+    //第2进度值
     private TextView mSecondProgressTv;
+    //每次增减的单位
     private int increase = 10;
     private int decrease = -10;
+    //第一进度条初始的进度值
     private int originalFirstPro = 50;
+    //第2进度条初始的进度值
     private int originalSecondPro = 80;
     private Context mContext =this;
+    //自定义进度条
     private ProgressBar mCustomProgressBar;
 
 
@@ -35,7 +41,12 @@ public class ProgressBarActivity extends BaseActivity implements View.OnClickLis
         initView();
         initData();
     }
-
+  /**
+     * @description 初始化水平进度条 增加按钮 减少按钮
+   *
+     * @author CF
+     * created at 2018/10/24/024  22:29
+     */
     private void initView(){
         mProgressBarHorizontal = (ProgressBar) findViewById(R.id.progressBarHorizontal);
         mAdd = (Button) findViewById(R.id.add);

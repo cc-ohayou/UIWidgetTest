@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"
         android:text="软件下载"
         android:onClick="showDialog"/>
-
+<!--自定义彩色进度条 样式通过 @drawable/progressbar指定-->
     <ProgressBar
         android:id="@+id/customProgressBar"
         style="?android:attr/progressBarStyleHorizontal"

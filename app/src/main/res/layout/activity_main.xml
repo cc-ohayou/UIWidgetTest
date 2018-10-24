@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+
+<LinearLayout android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
         android:id="@+id/text01"
@@ -48,19 +46,50 @@
         android:maxLines="3"
         />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/image01"
-        />
-    <!-- 进度条 菊花转圈  可改变水平的或者圆形的 代码中通过设置可见属性控制隐藏和显示-->
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleLarge"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        <!-- 进度条 菊花转圈  可改变水平的或者圆形的 代码中通过设置可见属性控制隐藏和显示-->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/butProgressAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:text="增加"
+                android:max="100"
+                />
+            <Button
+                android:id="@+id/alertDialogBut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击看弹窗"
+                />
+            <Button
+                android:id="@+id/progressDialogBut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击看进度弹窗"
+                />
+            <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image01"
+            />
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>
